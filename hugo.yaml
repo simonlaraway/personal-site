@@ -1,0 +1,32 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'Simon Laraway'
+theme: 'hugo-PaperMod'
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: 
+      weight: 20
+    - identifier: samples
+      name: Samples
+      url: /samples/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 20
+
+
+params:
+  mainSections:
+  - about
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
