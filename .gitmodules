@@ -1,2 +1,3 @@
 [submodule "themes/hugo-PaperMod"]
-	url = https://github.com/example/repo.githttps://github.com/simonlaraway/personal-site.git
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+	path = themes/hugo-PaperMod
