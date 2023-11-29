@@ -1,7 +1,7 @@
 +++
 title = 'SEO overview and guidelines'
 date = 2023-10-10T14:20:16-07:00
-draft = true
+draft = false
 categories = "samples"
 +++
 
@@ -11,6 +11,6 @@ It provides an brief explanation of what SEO is and how writers should consider 
 
 **Tools used:** *Microsoft Word, Adobe Illustrator*
 
-<object data="/SEO_Guidelines.pdf" type="application/pdf" width="800px" height="700px" style="float: left">
+<object data="/SEO_Guidelines.pdf" type="application/pdf" width="10%" height="700px" style="float: left">
     <embed src="/SEO_Guidelines.pdf"/>
 </object>

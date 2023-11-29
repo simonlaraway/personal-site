@@ -17,7 +17,8 @@ I present it here as a PDF downloaded from the official Guidewire docs site. It 
 
 **Tools used:** *Oxygen XML Editor, Postman*
 
-<object data="/PATCHes in request inclusion.pdf" type="application/pdf" width="800px" height="700px" style="float: left">
+<object data="/PATCHes in request inclusion.pdf" type="application/pdf" width="140%" height="600vw" style="
+  justify-content: right">
     <embed src="/PATCHes in request inclusion.pdf"/>
 </object>
 
