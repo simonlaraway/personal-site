@@ -19,12 +19,12 @@ I present it here as a PDF downloaded from the official Guidewire docs site. It 
 
 **Tools used:** *Oxygen XML Editor, Postman*
 
-<object data="/patches.pdf" type="application/pdf" width="140%" height="600vw" style="
+<object data="patches.pdf" type="application/pdf" width="140%" height="600vw" style="
   justify-content: right">
     <embed src="/PATCHes in request inclusion.pdf"/>
 </object>
 
-Read it [here](/patches.pdf)
+Read it [here](patches.pdf)
 
 
 
