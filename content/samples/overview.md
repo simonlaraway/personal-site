@@ -11,6 +11,8 @@ It provides an brief explanation of what SEO is and how writers should consider 
 
 **Tools used:** *Microsoft Word, Adobe Illustrator*
 
-<object data="/SEO_Guidelines.pdf" type="application/pdf" width="10%" height="700px" style="float: left">
+<object data="/SEO_Guidelines.pdf" type="application/pdf" width="100%" height="700px" style="float: left">
     <embed src="/SEO_Guidelines.pdf"/>
 </object>
+
+

@@ -11,16 +11,20 @@ This brief topic details a previously undocumented behavior of an API in Guidewi
 
 It provides information on using a PATCH HTTP request and how this necessitates different fields in the body of the request than other HTTP requests, which are documented in other topics which I provided links to.
 
+<!-- Request inclusion: explain. Also add a preview image as a png. -->
+
 I wrote this topic with the supervision of a senior tech writer after discovering this previously undocumented behavior in my own test calls (using Postman).
 
 I present it here as a PDF downloaded from the official Guidewire docs site. It was authored in Oxygen XML editor and published in HTML, and then I generated the PDF from that HTML. Hopefully that explains any odd formatting.
 
 **Tools used:** *Oxygen XML Editor, Postman*
 
-<object data="/PATCHes in request inclusion.pdf" type="application/pdf" width="140%" height="600vw" style="
+<object data="/patches.pdf" type="application/pdf" width="140%" height="600vw" style="
   justify-content: right">
     <embed src="/PATCHes in request inclusion.pdf"/>
 </object>
+
+Read it [here](/patches.pdf)
 
 
 
