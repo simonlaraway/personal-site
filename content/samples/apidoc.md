@@ -24,7 +24,7 @@ I present it here as a PDF downloaded from the official Guidewire docs site. It 
     <embed src="/PATCHes in request inclusion.pdf"/>
 </object>
 
-Read it [here](patches.pdf)
+Read it [here](public/patches.pdf)
 
 
 
