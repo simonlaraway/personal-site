@@ -9,3 +9,13 @@
     padding-bottom: 40px;
 }
 
+object {
+    padding: 10px;
+    border: 3px grey solid;
+    border-radius: 5px;
+}
+
+/* body {
+
+} */
+
