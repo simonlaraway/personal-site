@@ -7,24 +7,19 @@ params:
     ShowBreadCrumbs: true
 ---
 
-This brief topic details a previously undocumented behavior of an API in Guidewire's CloudAPI platform.
+This topic details a behavior of APIs in Guidewire's CloudAPI platform. This topic supplements existing API documentation 
 
-It provides information on using a PATCH HTTP request and how this necessitates different fields in the body of the request than other HTTP requests, which are documented in other topics which I provided links to.
+For some background, request inclusion is a technique in which a single API call contains nested HTTP requests. (Request inclusion is explained in the Guidewire Cloud API docs [here](https://docs.guidewire.com/cloud/pc/202306/cloudapibf/cloudAPI/topics/102-Optim/03-request-inclusion/c_request-inclusion.html).) It is used to minimize the amount of calls that need to be made. For example, a POST request to create a resource might have a nested POST request to create a related resource. 
 
-<!-- Request inclusion: explain. Also add a preview image as a png. -->
+The topic provides information on using PATCH HTTP requests in request inclusion and how this necessitates different fields in the body of the request from POSTs, which were documented already.
 
-I wrote this topic with the supervision of a senior tech writer after discovering this previously undocumented behavior in my own test calls (using Postman).
+I wrote this topic with the supervision of a senior tech writer after discovering this behavior with my own Postman test calls.
 
-I present it here as a PDF downloaded from the official Guidewire docs site. It was authored in Oxygen XML editor and published in HTML, and then I generated the PDF from that HTML. Hopefully that explains any odd formatting.
+I wrote it in the Oxygen XML editor. After merging it into the main repo, it was published to [docs.guidewire.com](https://docs.guidewire.com/) and then I generated the PDF from that HTML.
 
 **Tools used:** *Oxygen XML Editor, Postman*
 
-<object data="patches.pdf" type="application/pdf" width="140%" height="600vw" style="
-  justify-content: right">
-    <embed src="/PATCHes in request inclusion.pdf"/>
-</object>
-
-Read it [here](public/patches.pdf)
-
+[![Screencap of API documentation](/patches.png)](/patches.pdf)
+Click the image to see the full text.
 
 

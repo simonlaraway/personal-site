@@ -14,7 +14,7 @@ menu:
       url: /samples/
       weight: 30
     - identifier: about
-      name: About
+      name: About Me/CV
       url: /about
     - identifier: posts
       name: Posts

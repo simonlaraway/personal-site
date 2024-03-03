@@ -1,7 +1,7 @@
 ---
 title: 'Technical description'
 date: 2023-10-29T20:48:35-06:00
-draft: false
+draft: true
 categories: ["samples"]
 params:
     ShowBreadCrumbs: true
