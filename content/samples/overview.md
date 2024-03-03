@@ -1,7 +1,7 @@
 +++
 title = 'SEO overview and guidelines'
 date = 2023-10-10T14:20:16-07:00
-draft = false
+draft = true
 categories = "samples"
 +++
 
