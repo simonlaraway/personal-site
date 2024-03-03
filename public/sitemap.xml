@@ -2,9 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.org/posts/some_thoughts_on_sardines/</loc>
+    <lastmod>2023-11-06T20:29:36-07:00</lastmod>
+  </url><url>
+    <loc>https://example.org/about/</loc>
+    <lastmod>2023-11-05T19:09:26-07:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/</loc>
+    <lastmod>2023-11-05T19:09:15-07:00</lastmod>
+  </url><url>
+    <loc>https://example.org/samples/</loc>
+    <lastmod>2023-11-05T19:08:40-07:00</lastmod>
+  </url><url>
+    <loc>https://example.org/samples/apidoc/</loc>
+    <lastmod>2023-11-05T19:07:40-07:00</lastmod>
+  </url><url>
     <loc>https://example.org/categories/</loc>
+    <lastmod>2023-11-05T19:07:40-07:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/samples/</loc>
+    <lastmod>2023-11-05T19:07:40-07:00</lastmod>
   </url><url>
     <loc>https://example.org/</loc>
+    <lastmod>2023-10-29T22:10:25-06:00</lastmod>
+  </url><url>
+    <loc>https://example.org/samples/overview/</loc>
+    <lastmod>2023-10-10T14:20:16-07:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/</loc>
   </url>
