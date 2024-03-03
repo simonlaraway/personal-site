@@ -9,18 +9,18 @@ menu:
   main:
     - identifier: home
       name: Home
-      url: 
+      url: /personal-site/
       weight: 20
     - identifier: samples
       name: Samples
-      url: /samples/
+      url: /personal-site/samples/
       weight: 30
     - identifier: about
       name: About Me/CV
-      url: /about
+      url: /personal-site/about
     - identifier: posts
       name: Posts
-      url: /posts/
+      url: /personal-site//posts/
       weight: 20
 
 
