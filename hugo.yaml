@@ -7,21 +7,17 @@ relativeURLs: true
 
 menu:
   main:
-    - identifier: home
-      name: Home
-      url: /personal-site/
-      weight: 20
-    - identifier: samples
-      name: Samples
-      url: /personal-site/samples/
+    - identifier: portfolio
+      name: Portfolio
+      url: /portfolio/
       weight: 30
     - identifier: about
       name: About Me/CV
-      url: /personal-site/about
-    - identifier: posts
-      name: Posts
-      url: /personal-site//posts/
-      weight: 20
+      url: /about
+    # - identifier: posts
+    #   name: Posts
+    #   url: /posts/
+    #   weight: 20
 
 
 params:
