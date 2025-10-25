@@ -1,6 +1,6 @@
 +++
 title = 'SEO overview and guidelines'
-draft = false
+draft = true
 categories = "samples"
 +++
 
