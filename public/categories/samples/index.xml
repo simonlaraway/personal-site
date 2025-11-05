@@ -7,14 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://simonlaraway.github.io/categories/samples/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>API configuration topic</title>
+      <title>API configuration documentation</title>
       <link>https://simonlaraway.github.io/portfolio/api-config-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://simonlaraway.github.io/portfolio/api-config-example/</guid>
       <description>Description: This topic documents a feature related to the configuration of Cloud API, Guidewire&amp;rsquo;s REST API platform.
-Tools: Oxygen (for authoring), Postman (for testing), Intellij (for testing)
-Additional Context: This topic is part of the Cloud API Developer Guide, which describes in detail the configuration capabilities of Guidewire Cloud API. The target audience is configuration developers familiar with the Guidewire ecosystem.</description>
+Tools: Oxygen (for authoring), Intellij (for testing)
+Additional Context: This topic is part of the Cloud API Developer Guide, which describes in detail the configuration capabilities of Guidewire Cloud API. The target audience is configuration developers familiar with the Guidewire ecosystem.
+Preload Requests PDF</description>
     </item>
     
     <item>
@@ -23,18 +24,8 @@ Additional Context: This topic is part of the Cloud API Developer Guide, which d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://simonlaraway.github.io/portfolio/apidoc/</guid>
-      <description>I wrote most of the doc for how to use BillingCenter&amp;rsquo;s API.
-This topic describes how caller applications can make payments to BillingCenter. There are a lot of stuff.</description>
-    </item>
-    
-    <item>
-      <title>SEO overview and guidelines</title>
-      <link>https://simonlaraway.github.io/portfolio/overview/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simonlaraway.github.io/portfolio/overview/</guid>
-      <description>This is an overview of SEO and a tutorial on implementing it in a specific web publishing context. I wrote for a non-technical audience of writers at BYU&amp;rsquo;s Humanities Digital Media and Communications office.
-It provides an brief explanation of what SEO is and how writers should consider it and implement it when writing content. It then gives detailed information on how to apply SEO settings on the content management system that writers use to publish web articles.</description>
+      <description>Description: This is content I wrote to document Guidewire&amp;rsquo;s Billing API. This chapter describes how producers (otherwise known as insurance agents or brokers) can make and manage payments to BillingCenter through the API.
+Tools: Postman, Oxygen, Github</description>
     </item>
     
   </channel>
