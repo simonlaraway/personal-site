@@ -51,5 +51,3 @@ caches:
   modules:
     dir: :cacheDir/modules
     maxAge: -1
-  images:
-    dir: :cacheDir/images
