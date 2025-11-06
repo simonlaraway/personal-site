@@ -23,6 +23,7 @@ menu:
 params:
   mainSections:
   - about
+  social: true
 
 markup:
   goldmark:
