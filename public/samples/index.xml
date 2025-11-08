@@ -2,30 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Samples on Simon Laraway</title>
-    <link>https://example.org/samples/</link>
+    <link>http://localhost:1313/samples/</link>
     <description>Recent content in Samples on Simon Laraway</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Nov 2023 19:08:40 -0700</lastBuildDate><atom:link href="https://example.org/samples/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>API documentation</title>
-      <link>https://example.org/samples/apidoc/</link>
-      <pubDate>Sun, 05 Nov 2023 19:07:40 -0700</pubDate>
-      
-      <guid>https://example.org/samples/apidoc/</guid>
-      <description>This topic details a behavior of APIs in Guidewire&amp;rsquo;s CloudAPI platform. This topic supplements existing API documentation
-For some background, request inclusion is a technique in which a single API call contains nested HTTP requests. (Request inclusion is explained in the Guidewire Cloud API docs here.) It is used to minimize the amount of calls that need to be made. For example, a POST request to create a resource might have a nested POST request to create a related resource.</description>
-    </item>
-    
-    <item>
-      <title>SEO overview and guidelines</title>
-      <link>https://example.org/samples/overview/</link>
-      <pubDate>Tue, 10 Oct 2023 14:20:16 -0700</pubDate>
-      
-      <guid>https://example.org/samples/overview/</guid>
-      <description>This is an overview of SEO and a tutorial on implementing it in a specific web publishing context. I wrote for a non-technical audience of writers at BYU&amp;rsquo;s Humanities Digital Media and Communications office.
-It provides an brief explanation of what SEO is and how writers should consider it and implement it when writing content. It then gives detailed information on how to apply SEO settings on the content management system that writers use to publish web articles.</description>
-    </item>
-    
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/samples/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
