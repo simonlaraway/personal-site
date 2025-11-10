@@ -2,7 +2,7 @@ baseURL: 'https://simonlaraway.github.io/'
 languageCode: 'en-us'
 title: 'Simon Laraway'
 theme: 'hugo-PaperMod'
-canonifyURLs: true
+canonifyURLs: false
 relativeURLs: true
 
 menu:
@@ -30,22 +30,22 @@ markup:
     renderer:
       unsafe: true
 
-caches:
-  assets:
-    dir: :resourceDir/_gen
-    maxAge: -1
-  getcsv:
-    dir: :cacheDir/:project
-    maxAge: -1
-  getjson:
-    dir: :cacheDir/:project
-    maxAge: -1
-  getresource:
-    dir: :cacheDir/:project
-    maxAge: -1
-  images:
-    dir: :resourceDir/_gen
-    maxAge: -1
-  modules:
-    dir: :cacheDir/modules
-    maxAge: -1
+# caches:
+#   assets:
+#     dir: :resourceDir/_gen
+#     maxAge: -1
+#   getcsv:
+#     dir: :cacheDir/:project
+#     maxAge: -1
+#   getjson:
+#     dir: :cacheDir/:project
+#     maxAge: -1
+#   getresource:
+#     dir: :cacheDir/:project
+#     maxAge: -1
+#   images:
+#     dir: :resourceDir/_gen
+#     maxAge: -1
+#   modules:
+#     dir: :cacheDir/modules
+#     maxAge: -1
