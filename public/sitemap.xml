@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:63950/posts/test_post/</loc>
+    <loc>/posts/test_post/</loc>
     <lastmod>2023-11-06T20:29:36-07:00</lastmod>
   </url><url>
-    <loc>//localhost:63950/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2023-11-05T19:09:26-07:00</lastmod>
   </url><url>
-    <loc>//localhost:63950/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2023-11-05T19:09:15-07:00</lastmod>
   </url><url>
-    <loc>//localhost:63950/portfolio/</loc>
+    <loc>/portfolio/</loc>
     <lastmod>2023-11-05T19:08:40-07:00</lastmod>
   </url><url>
-    <loc>//localhost:63950/samples/</loc>
+    <loc>/samples/</loc>
     <lastmod>2023-11-05T19:07:40-07:00</lastmod>
   </url><url>
-    <loc>//localhost:63950/</loc>
+    <loc>/</loc>
     <lastmod>2023-10-29T22:10:25-06:00</lastmod>
   </url><url>
-    <loc>//localhost:63950/portfolio/api-config-example/</loc>
+    <loc>/portfolio/api-config-example/</loc>
   </url><url>
-    <loc>//localhost:63950/portfolio/apidoc/</loc>
+    <loc>/portfolio/apidoc/</loc>
   </url><url>
-    <loc>//localhost:63950/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>//localhost:63950/categories/samples/</loc>
+    <loc>/categories/samples/</loc>
   </url><url>
-    <loc>//localhost:63950/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>
