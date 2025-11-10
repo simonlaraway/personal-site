@@ -1,9 +1,9 @@
-baseURL: 'https://simonlaraway.github.io/'
+baseURL: ''
 languageCode: 'en-us'
 title: 'Simon Laraway'
 theme: 'hugo-PaperMod'
 canonifyURLs: false
-relativeURLs: true
+relativeURLs: false
 
 menu:
   main:

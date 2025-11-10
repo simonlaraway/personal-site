@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Samples on Simon Laraway</title>
-    <link>https://simonlaraway.github.io/categories/samples/</link>
+    <link>//localhost:63950/categories/samples/</link>
     <description>Recent content in Samples on Simon Laraway</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <atom:link href="https://simonlaraway.github.io/categories/samples/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:63950/categories/samples/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>API configuration documentation</title>
-      <link>https://simonlaraway.github.io/portfolio/api-config-example/</link>
+      <link>//localhost:63950/portfolio/api-config-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://simonlaraway.github.io/portfolio/api-config-example/</guid>
+      <guid>//localhost:63950/portfolio/api-config-example/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: This topic documents a feature related to the configuration of Cloud API, Guidewire&amp;rsquo;s REST API platform.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Oxygen (for authoring), Intellij (for testing)&lt;/p&gt;
 &lt;div style=&#34;display:inline-block;&#34;&gt;
-&lt;a href=&#34;../../preload-requests.pdf&#34;&gt;
-    &lt;img src=&#34;../../preload-screencap.png&#34; alt=&#34;Screencap of API documentation&#34; class=&#34;linked-image&#34;&gt;
+&lt;a href=&#34;//localhost:63950/preload-requests.pdf&#34;&gt;
+    &lt;img src=&#34;//localhost:63950/preload-screencap.png&#34; alt=&#34;Screencap of API documentation&#34; class=&#34;linked-image&#34;&gt;
 &lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Additional Context:&lt;/strong&gt; This topic is part of the &lt;a href=&#34;https://docs.guidewire.com/cloud/bc/latest/cloudapica/cloudAPI/topics/landing_Cloud-API-developer.html&#34;&gt;Cloud API Developer Guide&lt;/a&gt;, which describes in detail the configuration capabilities of Guidewire Cloud API. The target audience is configuration developers familiar with the Guidewire ecosystem.&lt;/p&gt;
@@ -24,14 +24,14 @@
     </item>
     <item>
       <title>API payments guide</title>
-      <link>https://simonlaraway.github.io/portfolio/apidoc/</link>
+      <link>//localhost:63950/portfolio/apidoc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://simonlaraway.github.io/portfolio/apidoc/</guid>
+      <guid>//localhost:63950/portfolio/apidoc/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt; This is content I wrote to document Guidewire&amp;rsquo;s &lt;a href=&#34;https://docs.guidewire.com/cloud/bc/latest/cloudapibf/cloudAPI/topics/landing_Cloud-API-consumer.html&#34;&gt;Billing API&lt;/a&gt;. This chapter describes how producers (otherwise known as insurance agents or brokers) can make and manage payments to BillingCenter through the API.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt; Postman, Oxygen, Github&lt;/p&gt;
 &lt;div style=&#34;display:inline-block;&#34;&gt;
 &lt;a href=&#34;https://docs.guidewire.com/cloud/bc/202507/cloudapibf/cloudAPI/topics/132-BCBilling/agency-bill/c_agency-bill-payments.html&#34;&gt;
-    &lt;img src=&#34;../../api-payments-example.png&#34; alt=&#34;Screencap of API documentation&#34; class=&#34;linked-image&#34;&gt;
+    &lt;img src=&#34;//localhost:63950/api-payments-example.png&#34; alt=&#34;Screencap of API documentation&#34; class=&#34;linked-image&#34;&gt;
 &lt;/a&gt;
 &lt;/div&gt;</description>
     </item>
