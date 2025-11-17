@@ -1,9 +1,9 @@
-baseURL: 'https://simonlaraway.github.io/personal-site'
+baseURL: 'https://simonlaraway.github.io/personal-site/'
 languageCode: 'en-us'
 title: 'Simon Laraway'
 theme: 'hugo-PaperMod'
-canonifyURLs: false
-relativeURLs: false
+# canonifyURLs: false
+# relativeURLs: false
 
 menu:
   main:
@@ -19,6 +19,12 @@ menu:
     #   url: /posts/
     #   weight: 20
 
+module:
+  mounts:
+  - source: assets
+    target: assets
+  - source: static
+    target: assets
 
 params:
   mainSections:
