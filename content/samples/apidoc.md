@@ -19,7 +19,7 @@ I wrote it in the Oxygen XML editor. After merging it into the main repo, it was
 
 **Tools used:** *Oxygen XML Editor, Postman*
 
-[![Screencap of API documentation](/patches.png)](/patches.pdf)
+[![Screencap of API documentation](patches.png)](patches.pdf)
 Click the image to see the full text.
 
 

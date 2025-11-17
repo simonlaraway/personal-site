@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Samples on Simon Laraway</title>
-    <link>/samples/</link>
+    <link>https://simonlaraway.github.io/personal-site/samples/</link>
     <description>Recent content in Samples on Simon Laraway</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="/samples/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://simonlaraway.github.io/personal-site/samples/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

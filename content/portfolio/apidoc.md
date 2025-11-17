@@ -10,11 +10,8 @@ params:
 
 **Tools:** Postman, Oxygen, Github
 
-<div style="display:inline-block;">
-<a href="https://docs.guidewire.com/cloud/bc/202507/cloudapibf/cloudAPI/topics/132-BCBilling/agency-bill/c_agency-bill-payments.html">
-    <img src="/api-payments-example.png" alt="Screencap of API documentation" class="linked-image">
-</a>
-</div>
+[![Screencap of API documentation](/static/api-payments-example.png)](https://docs.guidewire.com/cloud/bc/latest/cloudapibf/cloudAPI/topics/132-BCBilling/agency-bill/c_agency-bill-payments.html)
+
 
 
 
