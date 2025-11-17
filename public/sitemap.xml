@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/posts/test_post/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/posts/test_post/</loc>
     <lastmod>2023-11-06T20:29:36-07:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/about/</loc>
     <lastmod>2023-11-05T19:09:26-07:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/posts/</loc>
     <lastmod>2023-11-05T19:09:15-07:00</lastmod>
   </url><url>
-    <loc>/portfolio/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/portfolio/</loc>
     <lastmod>2023-11-05T19:08:40-07:00</lastmod>
   </url><url>
-    <loc>/samples/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/samples/</loc>
     <lastmod>2023-11-05T19:07:40-07:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/</loc>
     <lastmod>2023-10-29T22:10:25-06:00</lastmod>
   </url><url>
-    <loc>/portfolio/api-config-example/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/portfolio/api-config-example/</loc>
   </url><url>
-    <loc>/portfolio/apidoc/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/portfolio/apidoc/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/categories/</loc>
   </url><url>
-    <loc>/categories/samples/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/categories/samples/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://simonlaraway.github.io/personal-site/tags/</loc>
   </url>
 </urlset>
