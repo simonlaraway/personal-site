@@ -5,11 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Test post | Simon Laraway</title>
+<title>API reference doc improvements | Simon Laraway</title>
 <meta name="keywords" content="">
-<meta name="description" content="This is a test blog post.">
+<meta name="description" content="Explanation: At Guidewire, developers write and maintain the OpenAPI spec files, and I generate documentation from them using Docusaurus with a modified Redoc plugin.
+Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation. I wrote custom Javascript to process and render the specs, and CSS to make visual improvements.
+See the API refs live at: https://docs.guidewire.com/cloud/bc/202511/apiref/
+1. Sidebar overhaul
+Problem: The sidebar placed all the endpoints in an OpenAPI spec together at the same level, and the sidebar only listed the paths, not the resources themselves. This made it hard to find information for specs with many endpoints and longer paths.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/personal-site/posts/test_post/">
+<link rel="canonical" href="http://localhost:1313/personal-site/portfolio/api-ref-improvements/">
 <link crossorigin="anonymous" href="/personal-site/assets/css/stylesheet.60ea65106ee4e70899b8bdfb4967dad2a5f77b6ec15f9f1a570f9d848d606614.css" integrity="sha256-YOplEG7k5wiZuL37SWfa0qX3e27BX58aVw&#43;dhI1gZhQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/personal-site/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/personal-site/favicon-16x16.png">
@@ -18,7 +22,7 @@
 <link rel="mask-icon" href="http://localhost:1313/personal-site/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/personal-site/posts/test_post/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/personal-site/portfolio/api-ref-improvements/">
 <noscript>
     <style>
         #theme-toggle,
@@ -324,15 +328,70 @@
 
 <article class="post-single">
   <header class="post-header">
-    
+    <div class="breadcrumbs"><a href="http://localhost:1313/personal-site/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/personal-site/portfolio/">Writing and tooling work samples</a></div>
     <h1 class="post-title entry-hint-parent">
-      Test post
+      API reference doc improvements
     </h1>
-    <div class="post-meta"><span title='2023-11-06 20:29:36 -0700 MST'>November 6, 2023</span>
+    <div class="post-meta">
 
 </div>
   </header> 
-  <div class="post-content"><p>This is a test blog post.</p>
+  <div class="post-content"><p><strong>Explanation</strong>: At Guidewire, developers write and maintain the OpenAPI spec files, and I generate documentation from them using Docusaurus with a modified Redoc plugin.</p>
+<p>Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation. I wrote custom Javascript to process and render the specs, and CSS to make visual improvements.</p>
+<p>See the API refs live at: <a href="https://docs.guidewire.com/cloud/bc/202511/apiref/">https://docs.guidewire.com/cloud/bc/202511/apiref/</a></p>
+<h3 id="1-sidebar-overhaul">1. Sidebar overhaul<a hidden class="anchor" aria-hidden="true" href="#1-sidebar-overhaul">#</a></h3>
+<p><strong>Problem</strong>: The sidebar placed all the endpoints in an OpenAPI spec together at the same level, and the sidebar only listed the paths, not the resources themselves. This made it hard to find information for specs with many endpoints and longer paths.</p>
+<p><strong>Solution</strong>: Dynamically generate sidebar with logical endpoint grouping.</p>
+<div class="images-wrapper">
+    <div class="image-container">
+    <img src="/personal-site/sidebar.png" alt="A screencap of an page with documentation for a schema object called 'Note.' The page describes fields such as Account, Author, Body, and BodySummary. The page is the first item in the sidebar underneath the heading 'Billing API Schema Reference'. ">
+    </div>
+</div>
+<p style="text-align: center; font-size: 14px; opacity: 50%;">Click image to expand</p>
+<h3 id="2-centralized-schema-documentation">2. Centralized schema documentation<a hidden class="anchor" aria-hidden="true" href="#2-centralized-schema-documentation">#</a></h3>
+<p><strong>Problem</strong>: There was no centralized documentation for schema object themselves. The properties for individual schemas were only accessible by drilling down into the request or responses on each individual endpoint page.</p>
+<p><strong>Solution</strong>: Generate pages for individual schema objects and list them at the top of the sidebar for each API.</p>
+<div class="images-wrapper">
+    <div class="image-container">
+    <img src="/personal-site/schema.png" alt="A screencap of an page with documentation for a schema object called 'Note.' The page describes fields such as Account, Author, Body, and BodySummary. The page is the first item in the sidebar underneath the heading 'Billing API Schema Reference'. ">
+    </div>
+</div>
+<p style="text-align: center; font-size: 14px; opacity: 50%;">Click image to expand</p>
+<h3 id="3-schema-property-descriptions">3. Schema property descriptions<a hidden class="anchor" aria-hidden="true" href="#3-schema-property-descriptions">#</a></h3>
+<p><strong>Problem</strong>: The descriptions for some properties were not being properly displayed: for properties that were references to other schemas, the description of the property was replaced with a generic description.</p>
+<p><strong>Solution</strong>: Write script to go through the spec and wrap <code>$refs</code> in <code>allOf</code> keyword before the documentation is generated. The correct descriptions are displayed now.</p>
+<div class="image-toggle-container">
+    <div class="toggle-controls">
+        <button class="toggle-btn active" onclick="showImage(1, this.closest('.image-toggle-container'))">Before</button>
+        <button class="toggle-btn" onclick="showImage(2, this.closest('.image-toggle-container'))">After</button>
+    </div>
+<div class="images-wrapper">
+    <div class="image-container">
+        <img src="/personal-site/newscreencapswcallouts/sidebar-before-callouts.png" alt="Screencap of Guidewire Billing API references with callouts highlighting the old sidebar layout and generic property descriptions. The old sidebar has consists of a API endpoints such as 'GET /accounts/{accountId}' and the generic property description reads 'A reference to an element'.">
+        <img src="/personal-site/newscreencapswcallouts/sidebar-after-callouts.png" alt="Screencap of Guidewire Billing API references with callouts highlighting centralized schema documentation, correct property descriptions, and a new sidebar layout. The centralized schema documentation appears at the top of the sidebar, underneath the subheading for 'Billing API', and the rest of the items under the Billing API subheading are resources, such as Account Charges, Account Contacts, and so on. Additionally, the correct property description reads 'A reference to the PaymentPlan in use on this policy period'.">
+    </div>   
+</div>
+<p style="text-align: center; font-size: 14px; opacity: 50%;">Click image to expand</p>
+</div>
+<h3 id="4-css-improvements">4. CSS improvements<a hidden class="anchor" aria-hidden="true" href="#4-css-improvements">#</a></h3>
+<p><strong>Problem</strong>: A lot of the CSS styling was OOTB Redoc. The fonts, colors, and</p>
+<p><strong>Solution</strong>: Make some manual modifications to the fonts, colors, and spacing to make the API references look more like the rest of our doc site.</p>
+<h3 id="5-wip-code-samples">5. (WIP) Code samples<a hidden class="anchor" aria-hidden="true" href="#5-wip-code-samples">#</a></h3>
+<p><strong>Problem</strong>: There were no request/response code samples, there were only JSON .</p>
+<p><strong>Solution</strong>: Generate code samples with a Javascript library and insert them in a spec processing step. (This has not hit the doc site yet.)</p>
+<div class="image-toggle-container">
+    <div class="toggle-controls">
+        <button class="toggle-btn active" onclick="showImage(1, this.closest('.image-toggle-container'))">Before</button>
+        <button class="toggle-btn" onclick="showImage(2, this.closest('.image-toggle-container'))">After</button>
+    </div>
+<div class="images-wrapper">
+    <div class="image-container">
+        <img src="/personal-site/newscreencapswcallouts/overall-before-callouts.png" alt="Screencap of Guidewire Billing API references with callout that states 'No code samples' with an arrow to where the code samples are supposed to be.">
+        <img src="/personal-site/newscreencapswcallouts/overall-after-callouts.png" alt="Screencap of Guidewire Billing API references with callout highlighting code samples. There are samples for cURL, Javascript, Python, Java, and Go.">
+    </div>   
+</div>
+<p style="text-align: center; font-size: 14px; opacity: 50%;">Click image to expand</p>
+</div>
 
 
   </div>
