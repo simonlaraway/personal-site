@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Home on Simon Laraway</title>
-    <link>http://localhost:1313/personal-site/</link>
+    <link>https://simonlaraway.github.io/personal-site/</link>
     <description>Recent content in Home on Simon Laraway</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 06 Nov 2023 20:29:36 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/personal-site/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://simonlaraway.github.io/personal-site/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test post</title>
-      <link>http://localhost:1313/personal-site/posts/test_post/</link>
+      <link>https://simonlaraway.github.io/personal-site/posts/test_post/</link>
       <pubDate>Mon, 06 Nov 2023 20:29:36 -0700</pubDate>
-      <guid>http://localhost:1313/personal-site/posts/test_post/</guid>
+      <guid>https://simonlaraway.github.io/personal-site/posts/test_post/</guid>
       <description>&lt;p&gt;This is a test blog post.&lt;/p&gt;</description>
     </item>
     <item>
       <title>API payments guide</title>
-      <link>http://localhost:1313/personal-site/portfolio/apidoc/</link>
+      <link>https://simonlaraway.github.io/personal-site/portfolio/apidoc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/personal-site/portfolio/apidoc/</guid>
+      <guid>https://simonlaraway.github.io/personal-site/portfolio/apidoc/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt; This is content I wrote to document Guidewire&amp;rsquo;s &lt;a href=&#34;https://docs.guidewire.com/cloud/bc/latest/cloudapibf/cloudAPI/topics/landing_Cloud-API-consumer.html&#34;&gt;Billing API&lt;/a&gt;. This chapter describes how producers (otherwise known as insurance agents or brokers) can make and manage payments to BillingCenter through the API.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Tools:&lt;/strong&gt; Postman, Oxygen, Github&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.guidewire.com/cloud/bc/latest/cloudapibf/cloudAPI/topics/132-BCBilling/agency-bill/c_agency-bill-payments.html&#34;&gt;&lt;img alt=&#34;Screencap of API documentation&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/personal-site/api-payments-example.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://docs.guidewire.com/cloud/bc/latest/cloudapibf/cloudAPI/topics/132-BCBilling/agency-bill/c_agency-bill-payments.html&#34;&gt;&lt;img alt=&#34;Screencap of API documentation&#34; loading=&#34;lazy&#34; src=&#34;https://simonlaraway.github.io/personal-site/api-payments-example.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>API reference doc improvements</title>
-      <link>http://localhost:1313/personal-site/portfolio/api-ref-improvements/</link>
+      <link>https://simonlaraway.github.io/personal-site/portfolio/api-ref-improvements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/personal-site/portfolio/api-ref-improvements/</guid>
+      <guid>https://simonlaraway.github.io/personal-site/portfolio/api-ref-improvements/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Explanation&lt;/strong&gt;: At Guidewire, developers write and maintain the OpenAPI spec files, and I generate documentation from them using Docusaurus with a modified Redoc plugin.&lt;/p&gt;
 &lt;p&gt;Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation. I wrote custom Javascript to process and render the specs, and CSS to make visual improvements.&lt;/p&gt;
 &lt;p&gt;See the API refs live at: &lt;a href=&#34;https://docs.guidewire.com/cloud/bc/202511/apiref/&#34;&gt;https://docs.guidewire.com/cloud/bc/202511/apiref/&lt;/a&gt;&lt;/p&gt;
@@ -37,19 +37,19 @@
     </item>
     <item>
       <title>Configuration documentation</title>
-      <link>http://localhost:1313/personal-site/portfolio/api-config-example/</link>
+      <link>https://simonlaraway.github.io/personal-site/portfolio/api-config-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/personal-site/portfolio/api-config-example/</guid>
+      <guid>https://simonlaraway.github.io/personal-site/portfolio/api-config-example/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: This topic documents a feature related to the configuration of Cloud API, Guidewire&amp;rsquo;s REST API platform.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Oxygen (for authoring), Intellij (for testing)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://localhost:1313/personal-site/preload-requests.pdf&#34;&gt;&lt;img alt=&#34;Screencap of API documentation&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/personal-site/preload-screencap.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://simonlaraway.github.io/personal-site/preload-requests.pdf&#34;&gt;&lt;img alt=&#34;Screencap of API documentation&#34; loading=&#34;lazy&#34; src=&#34;https://simonlaraway.github.io/personal-site/preload-screencap.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Additional Context:&lt;/strong&gt; This topic is part of the &lt;a href=&#34;https://docs.guidewire.com/cloud/bc/latest/cloudapica/cloudAPI/topics/landing_Cloud-API-developer.html&#34;&gt;Cloud API Developer Guide&lt;/a&gt;, which describes in detail the configuration capabilities of Guidewire Cloud API. The target audience is configuration developers familiar with the Guidewire ecosystem.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Internal tooling documentation</title>
-      <link>http://localhost:1313/personal-site/portfolio/rng/</link>
+      <link>https://simonlaraway.github.io/personal-site/portfolio/rng/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/personal-site/portfolio/rng/</guid>
+      <guid>https://simonlaraway.github.io/personal-site/portfolio/rng/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Explanation&lt;/strong&gt;: The Release Notes Generator is an internally-developed doc tool app that Guidewire writers use to pull release notes from Jira and format them in DITA. I took ownership of the Release Notes Generator after volunteering to assist our overworked documentation tool developer team. I have made a number of improvements to its functionality, and I revamped our internal documentation on it. The audience is both users of the release notes generator, and anyone who takes over development of the release note generator in the future.&lt;/p&gt;</description>
     </item>
   </channel>
