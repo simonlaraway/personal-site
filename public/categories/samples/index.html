@@ -71,7 +71,213 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="https://simonlaraway.github.io/personal-site/categories/samples/">
+</script><script>
+    function showImage(imageNumber, container) {
+        const imageContainer = container.querySelector('.image-container');
+        const buttons = container.querySelectorAll('.toggle-btn');
+        
+        buttons.forEach((btn, index) => {
+            if (index + 1 === imageNumber) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        
+        if (imageNumber === 2) {
+            imageContainer.classList.add('show-image-2');
+        } else {
+            imageContainer.classList.remove('show-image-2');
+        }
+    }
+
+    function expandImage(event) {
+        
+        if (event.target.classList.contains('close-btn')) return;
+        
+        const imageContainer = event.currentTarget;
+        const overlay = document.getElementById('imageOverlay') || createOverlay();
+        
+        
+        const images = imageContainer.querySelectorAll('img');
+        const currentImage = imageContainer.classList.contains('show-image-2') ? images[1] : images[0];
+        const expandedImage = currentImage.cloneNode(true);
+        
+        
+        expandedImage.style.cursor = 'pointer';
+        expandedImage.addEventListener('click', closeOverlay);
+        
+        
+        const contentDiv = overlay.querySelector('.overlay-content');
+        contentDiv.innerHTML = '';
+        contentDiv.appendChild(expandedImage);
+        
+        
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        
+        document.addEventListener('keydown', handleEscKey);
+    }
+
+    function createOverlay() {
+        const overlay = document.createElement('div');
+        overlay.id = 'imageOverlay';
+        overlay.className = 'image-overlay';
+        overlay.innerHTML = `
+            <div class="overlay-content">
+                <button class="close-btn" onclick="closeOverlay()">&times;</button>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+        
+        
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeOverlay();
+            }
+        });
+        
+        return overlay;
+    }
+
+    function handleEscKey(event) {
+        if (event.key === 'Escape' || event.key === 'Esc') {
+            closeOverlay();
+        }
+    }
+
+    function closeOverlay() {
+        const overlay = document.getElementById('imageOverlay');
+        if (overlay) {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            document.removeEventListener('keydown', handleEscKey);
+        }
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const imageContainers = document.querySelectorAll('.image-container');
+        imageContainers.forEach(function(imageContainer) {
+            imageContainer.style.cursor = 'pointer';
+            imageContainer.addEventListener('click', expandImage);
+        });
+    });
+</script>
+
+<style>
+    .image-toggle-container {
+        max-width: 1000px;
+        margin: 20px auto;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    .toggle-controls {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .toggle-btn {
+        padding: 5px 40px;
+        border: 1px solid #ffffffb5;
+        background: #205f7df0;
+        color: #f6f6f6;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    
+    .toggle-btn.active {
+        background: #3abdffd8;
+        color: white;
+    }
+    
+    .images-wrapper {
+        position: relative;
+        width: 100%;
+        border-radius: 2px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    .image-container {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    
+    .image-container.show-image-2 {
+        transform: translateX(-100%);
+    }
+    
+    .image-container img {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .image-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-overlay.active {
+        display: flex;
+    }
+
+    .overlay-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .overlay-content img {
+        max-width: 100%;
+        max-height: 90vh;
+        object-fit: contain;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 2px solid #333;
+        color: #333;
+        font-size: 32px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 5px;
+        width: 50px;
+        height: 50px;
+        line-height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+
+    .close-btn:hover {
+        background-color: #ff4444;
+        color: white;
+        border-color: #ff4444;
+        transform: scale(1.1);
+    }
+</style><meta property="og:url" content="https://simonlaraway.github.io/personal-site/categories/samples/">
   <meta property="og:site_name" content="Simon Laraway">
   <meta property="og:title" content="Samples">
   <meta property="og:locale" content="en-us">
@@ -132,21 +338,6 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">API configuration documentation
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description: This topic documents a feature related to the configuration of Cloud API, Guidewire’s REST API platform.
-Tools: Oxygen (for authoring), Intellij (for testing)
-Additional Context: This topic is part of the Cloud API Developer Guide, which describes in detail the configuration capabilities of Guidewire Cloud API. The target audience is configuration developers familiar with the Guidewire ecosystem.
-</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to API configuration documentation" href="https://simonlaraway.github.io/personal-site/portfolio/api-config-example/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">API payments guide
     </h2>
   </header>
@@ -157,6 +348,50 @@ Tools: Postman, Oxygen, Github
   </div>
   <footer class="entry-footer"></footer>
   <a class="entry-link" aria-label="post link to API payments guide" href="https://simonlaraway.github.io/personal-site/portfolio/apidoc/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">API reference doc improvements
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Explanation: At Guidewire, developers write and maintain the OpenAPI spec files, and I generate documentation from them using Docusaurus with a modified Redoc plugin.
+Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation. I wrote custom Javascript to process and render the specs, and CSS to make visual improvements.
+See the API refs live at: https://docs.guidewire.com/cloud/bc/202511/apiref/
+1. Sidebar overhaul Problem: The sidebar placed all the endpoints in an OpenAPI spec together at the same level, and the sidebar only listed the paths, not the resources themselves. This made it hard to find information for specs with many endpoints and longer paths.
+...</p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to API reference doc improvements" href="https://simonlaraway.github.io/personal-site/portfolio/api-ref-improvements/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Configuration documentation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Description: This topic documents a feature related to the configuration of Cloud API, Guidewire’s REST API platform.
+Tools: Oxygen (for authoring), Intellij (for testing)
+Additional Context: This topic is part of the Cloud API Developer Guide, which describes in detail the configuration capabilities of Guidewire Cloud API. The target audience is configuration developers familiar with the Guidewire ecosystem.
+</p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to Configuration documentation" href="https://simonlaraway.github.io/personal-site/portfolio/api-config-example/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Internal tooling documentation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Explanation: The Release Notes Generator is an internally-developed doc tool app that Guidewire writers use to pull release notes from Jira and format them in DITA. I took ownership of the Release Notes Generator after volunteering to assist our overworked documentation tool developer team. I have made a number of improvements to its functionality, and I revamped our internal documentation on it. The audience is both users of the release notes generator, and anyone who takes over development of the release note generator in the future.
+...</p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to Internal tooling documentation" href="https://simonlaraway.github.io/personal-site/portfolio/rng/"></a>
 </article>
     </main>
     

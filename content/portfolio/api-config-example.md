@@ -1,5 +1,5 @@
 ---
-title: 'API configuration documentation'
+title: 'Configuration documentation'
 draft: false
 categories: ["samples"]
 params:

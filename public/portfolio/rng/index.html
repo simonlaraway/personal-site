@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Writing and tooling work samples | Simon Laraway</title>
+<title>Internal tooling documentation | Simon Laraway</title>
 <meta name="keywords" content="">
-<meta name="description" content="Writing and tooling work samples - Simon Laraway">
+<meta name="description" content="Explanation: The Release Notes Generator is an internally-developed doc tool app that Guidewire writers use to pull release notes from Jira and format them in DITA. I took ownership of the Release Notes Generator after volunteering to assist our overworked documentation tool developer team. I have made a number of improvements to its functionality, and I revamped our internal documentation on it. The audience is both users of the release notes generator, and anyone who takes over development of the release note generator in the future.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/personal-site/portfolio/">
+<link rel="canonical" href="http://localhost:1313/personal-site/portfolio/rng/">
 <link crossorigin="anonymous" href="/personal-site/assets/css/stylesheet.60ea65106ee4e70899b8bdfb4967dad2a5f77b6ec15f9f1a570f9d848d606614.css" integrity="sha256-YOplEG7k5wiZuL37SWfa0qX3e27BX58aVw&#43;dhI1gZhQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/personal-site/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/personal-site/favicon-16x16.png">
@@ -18,8 +18,7 @@
 <link rel="mask-icon" href="http://localhost:1313/personal-site/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/personal-site/portfolio/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/personal-site/portfolio/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/personal-site/portfolio/rng/">
 <noscript>
     <style>
         #theme-toggle,
@@ -279,7 +278,7 @@
     }
 </style>
 </head>
-<body class="list" id="top">
+<body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
@@ -310,7 +309,7 @@
         <ul id="menu">
             <li>
                 <a href="http://localhost:1313/personal-site/portfolio/" title="Portfolio">
-                    <span class="active">Portfolio</span>
+                    <span>Portfolio</span>
                 </a>
             </li>
             <li>
@@ -321,69 +320,38 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Writing and tooling work samples
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">API payments guide
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description: This is content I wrote to document Guidewire’s Billing API. This chapter describes how producers (otherwise known as insurance agents or brokers) can make and manage payments to BillingCenter through the API.
-Tools: Postman, Oxygen, Github
-</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to API payments guide" href="http://localhost:1313/personal-site/portfolio/apidoc/"></a>
-</article>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Internal tooling documentation
+    </h1>
+    <div class="post-meta">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">API reference doc improvements
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Explanation: At Guidewire, developers write and maintain the OpenAPI spec files, and I generate documentation from them using Docusaurus with a modified Redoc plugin.
-Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation. I wrote custom Javascript to process and render the specs, and CSS to make visual improvements.
-See the API refs live at: https://docs.guidewire.com/cloud/bc/202511/apiref/
-1. Sidebar overhaul Problem: The sidebar placed all the endpoints in an OpenAPI spec together at the same level, and the sidebar only listed the paths, not the resources themselves. This made it hard to find information for specs with many endpoints and longer paths.
-...</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to API reference doc improvements" href="http://localhost:1313/personal-site/portfolio/api-ref-improvements/"></a>
-</article>
+</div>
+  </header> 
+  <div class="post-content"><p><strong>Explanation</strong>: The Release Notes Generator is an internally-developed doc tool app that Guidewire writers use to pull release notes from Jira and format them in DITA. I took ownership of the Release Notes Generator after volunteering to assist our overworked documentation tool developer team. I have made a number of improvements to its functionality, and I revamped our internal documentation on it. The audience is both users of the release notes generator, and anyone who takes over development of the release note generator in the future.</p>
+<hr>
+<h1 id="release-notes-generator-user-guide">Release Notes Generator user guide<a hidden class="anchor" aria-hidden="true" href="#release-notes-generator-user-guide">#</a></h1>
+<p>When you have finalized the customer summaries for a release in Jira, you can use the Release Notes Generator to extract the customer summaries and output them in a DITA table.</p>
+<h2 id="using-the-release-notes-generator">Using the Release Notes Generator<a hidden class="anchor" aria-hidden="true" href="#using-the-release-notes-generator">#</a></h2>
+<p>The Release Notes Generator is a TeamCity build or something.</p>
+<ol>
+<li>Navigate to the <a href="www.example.com">Release Notes Generator</a>.</li>
+<li>Select Run. The &hellip; modal appears.</li>
+<li></li>
+</ol>
+<h2 id="how-the-release-notes-generator-works">How the release notes generator works<a hidden class="anchor" aria-hidden="true" href="#how-the-release-notes-generator-works">#</a></h2>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Configuration documentation
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description: This topic documents a feature related to the configuration of Cloud API, Guidewire’s REST API platform.
-Tools: Oxygen (for authoring), Intellij (for testing)
-Additional Context: This topic is part of the Cloud API Developer Guide, which describes in detail the configuration capabilities of Guidewire Cloud API. The target audience is configuration developers familiar with the Guidewire ecosystem.
-</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Configuration documentation" href="http://localhost:1313/personal-site/portfolio/api-config-example/"></a>
-</article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Internal tooling documentation
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Explanation: The Release Notes Generator is an internally-developed doc tool app that Guidewire writers use to pull release notes from Jira and format them in DITA. I took ownership of the Release Notes Generator after volunteering to assist our overworked documentation tool developer team. I have made a number of improvements to its functionality, and I revamped our internal documentation on it. The audience is both users of the release notes generator, and anyone who takes over development of the release note generator in the future.
-...</p>
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Internal tooling documentation" href="http://localhost:1313/personal-site/portfolio/rng/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
 </article>
     </main>
     

@@ -4,6 +4,8 @@
     width: 100%;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
+    margin-bottom: var(--content-gap);
+    margin-top: var(--content-gap);
     text-align: left;
     /* margin: 5px; */
     padding: 5px;
@@ -13,8 +15,4 @@
     background-color: #555;
     /* border-top: none;
     border-bottom: none; */
-  }
-
-  p {
-    float: left;
   }
