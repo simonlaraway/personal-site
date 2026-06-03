@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Writing and tooling work samples | Simon Laraway</title>
+<title>Writing and project work samples | Simon Laraway</title>
 <meta name="keywords" content="">
-<meta name="description" content="Writing and tooling work samples - Simon Laraway">
+<meta name="description" content="Writing and project work samples - Simon Laraway">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/personal-site/portfolio/">
 <link crossorigin="anonymous" href="/personal-site/assets/css/stylesheet.60ea65106ee4e70899b8bdfb4967dad2a5f77b6ec15f9f1a570f9d848d606614.css" integrity="sha256-YOplEG7k5wiZuL37SWfa0qX3e27BX58aVw&#43;dhI1gZhQ=" rel="preload stylesheet" as="style">
@@ -324,7 +324,7 @@
 <main class="main"> 
 <header class="page-header">
   <h1>
-    Writing and tooling work samples
+    Writing and project work samples
   </h1>
 </header>
 
@@ -336,6 +336,7 @@
   <div class="entry-content">
     <p>Description: This is content I wrote to document Guidewire’s Billing API. This chapter describes how producers (otherwise known as insurance agents or brokers) can make and manage payments to BillingCenter through the API.
 Tools: Postman, Oxygen, Github
+Click to see PDF
 </p>
   </div>
   <footer class="entry-footer"></footer>
@@ -344,18 +345,19 @@ Tools: Postman, Oxygen, Github
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">API reference doc improvements
+    <h2 class="entry-hint-parent">API reference doc UI improvements
     </h2>
   </header>
   <div class="entry-content">
-    <p>Explanation: At Guidewire, developers write and maintain the OpenAPI spec files, and I generate documentation from them using Docusaurus with a modified Redoc plugin.
-Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation. I wrote custom Javascript to process and render the specs, and CSS to make visual improvements.
-See the API refs live at: https://docs.guidewire.com/cloud/bc/202511/apiref/
+    <p>Description: At Guidewire, developers write and maintain the OpenAPI specification (spec) files. I generate API reference UI documentation from the OpenAPI specs using Docusaurus with a modified Redoc plugin.
+Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation.
+Tools: Javascript, CSS, OpenAPI overlays
+See the API refs live at: https://docs.guidewire.com/cloud/bc/latest/apiref/
 1. Sidebar overhaul Problem: The sidebar placed all the endpoints in an OpenAPI spec together at the same level, and the sidebar only listed the paths, not the resources themselves. This made it hard to find information for specs with many endpoints and longer paths.
 ...</p>
   </div>
   <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to API reference doc improvements" href="http://localhost:1313/personal-site/portfolio/api-ref-improvements/"></a>
+  <a class="entry-link" aria-label="post link to API reference doc UI improvements" href="http://localhost:1313/personal-site/portfolio/api-ref-improvements/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -364,9 +366,8 @@ See the API refs live at: https://docs.guidewire.com/cloud/bc/202511/apiref/
     </h2>
   </header>
   <div class="entry-content">
-    <p>Description: This topic documents a feature related to the configuration of Cloud API, Guidewire’s REST API platform.
+    <p>Description: This topic documents a feature related to the configuration of Cloud API, Guidewire’s REST API platform. The target audience is configuration developers familiar with the Guidewire ecosystem.
 Tools: Oxygen (for authoring), Intellij (for testing)
-Additional Context: This topic is part of the Cloud API Developer Guide, which describes in detail the configuration capabilities of Guidewire Cloud API. The target audience is configuration developers familiar with the Guidewire ecosystem.
 </p>
   </div>
   <footer class="entry-footer"></footer>
@@ -375,20 +376,22 @@ Additional Context: This topic is part of the Cloud API Developer Guide, which d
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Internal tooling documentation
+    <h2 class="entry-hint-parent">Doc tooling: API crosslink scripting
     </h2>
   </header>
   <div class="entry-content">
-    <p>Explanation: The Release Notes Generator is an internally-developed doc tool app that Guidewire writers use to pull release notes from Jira and format them in DITA. I took ownership of the Release Notes Generator after volunteering to assist our overworked documentation tool developer team. I have made a number of improvements to its functionality, and I revamped our internal documentation on it. The audience is both users of the release notes generator, and anyone who takes over development of the release note generator in the future.
+    <p>Description: In our API documentation at Guidewire, we have both API reference documentation (see here) and user guide documentation (see here)
+Both sets of documentation are incomplete without each other. In an effort to bridge the gap between the reference and the user guide documentation, I engineered a solution which allows us to do the following:
+Create dynamic cross-links from the API reference documentation to the relevant human-written documentation page, based on mappings created by regex and LLM calls Insert an AI-generated summary into the API reference documentation based on the relevant human-written documentation The solution makes use of Javascript scripting and LLM calls to populate OpenAPI overlays, which serve as an easily maintainable source of truth for the doc team’s augmentation of the API reference documentation. I regenerate the links and descriptions each release.
 ...</p>
   </div>
   <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Internal tooling documentation" href="http://localhost:1313/personal-site/portfolio/rng/"></a>
+  <a class="entry-link" aria-label="post link to Doc tooling: API crosslink scripting" href="http://localhost:1313/personal-site/portfolio/reference-dita-linking/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/personal-site/">Simon Laraway</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/personal-site/">Simon Laraway</a></span> · 
 
     <span>
         Powered by

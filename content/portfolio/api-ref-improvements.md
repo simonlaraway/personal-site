@@ -1,16 +1,18 @@
 ---
-title: 'API reference doc improvements'
+title: 'API reference doc UI improvements'
 draft: false
 categories: ["samples"]
 params:
     ShowBreadCrumbs: true
 ---
 
-**Explanation**: At Guidewire, developers write and maintain the OpenAPI spec files, and I generate documentation from them using Docusaurus with a modified Redoc plugin. 
+**Description**: At Guidewire, developers write and maintain the OpenAPI specification (spec) files. I generate API reference UI documentation from the OpenAPI specs using Docusaurus with a modified Redoc plugin. 
 
-Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation. I wrote custom Javascript to process and render the specs, and CSS to make visual improvements.
+Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation. 
 
-See the API refs live at: [https://docs.guidewire.com/cloud/bc/202511/apiref/](https://docs.guidewire.com/cloud/bc/202511/apiref/)
+**Tools:** Javascript, CSS, OpenAPI overlays
+
+See the API refs live at: [https://docs.guidewire.com/cloud/bc/latest/apiref/](https://docs.guidewire.com/cloud/bc/latest/apiref/)
 
 ### 1. Sidebar overhaul
 
@@ -27,7 +29,7 @@ See the API refs live at: [https://docs.guidewire.com/cloud/bc/202511/apiref/](h
 
 ### 2. Centralized schema documentation
 
-**Problem**: There was no centralized documentation for schema object themselves. The properties for individual schemas were only accessible by drilling down into the request or responses on each individual endpoint page.
+**Problem**: In our developer advisory group, some developers noted that was no centralized documentation for schema object themselves. The properties for individual schemas were only accessible by drilling down into the request or responses on each individual endpoint page.
 
 **Solution**: Generate pages for individual schema objects and list them at the top of the sidebar for each API.
 <div class="images-wrapper">
@@ -41,7 +43,7 @@ See the API refs live at: [https://docs.guidewire.com/cloud/bc/202511/apiref/](h
 
 **Problem**: The descriptions for some properties were not being properly displayed: for properties that were references to other schemas, the description of the property was replaced with a generic description.
 
-**Solution**: Write script to go through the spec and wrap `$refs` in `allOf` keyword before the documentation is generated. The correct descriptions are displayed now. 
+**Solution**: Write a script to go through the spec and wrap `$refs` in `allOf` keyword before the documentation is generated. The correct descriptions are displayed now. 
 
 <div class="image-toggle-container">
     <div class="toggle-controls">
@@ -60,7 +62,7 @@ See the API refs live at: [https://docs.guidewire.com/cloud/bc/202511/apiref/](h
 
 ### 4. CSS improvements
 
-**Problem**: A lot of the CSS styling was OOTB Redoc. The fonts, colors, and 
+**Problem**: A lot of the CSS styling was OOTB Redoc. The fonts, colors, and spacing did not always match the rerst of the documentation site.
 
 **Solution**: Make some manual modifications to the fonts, colors, and spacing to make the API references look more like the rest of our doc site. 
 
@@ -85,4 +87,5 @@ See the API refs live at: [https://docs.guidewire.com/cloud/bc/202511/apiref/](h
 <p style="text-align: center; font-size: 14px; opacity: 50%;">Click image to expand</p>
 </div>
     
+
 
