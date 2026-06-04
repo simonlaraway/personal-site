@@ -1,9 +1,9 @@
 ---
-title: 'Internal tooling documentation'
-draft: true
+title: 'Doc tooling: release notes generator'
+draft: false
 categories: ["samples"]
 params:
-    ShowBreadCrumbs: false
+    ShowBreadCrumbs: true
 ---
 
 **Description**: The Release Notes Generator is an internally-developed doc tool app that extracts customer summaries from Jira and outputs them in a DITA file. The app saves writers from needing to manually copy, paste, and format content from Jira each time they create release notes.
