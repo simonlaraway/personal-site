@@ -5,11 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Samples | Simon Laraway</title>
+<title>Doc tooling: API crosslink scripting | Simon Laraway</title>
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="Description: In our API documentation at Guidewire, we have both API reference documentation (see here) and user guide documentation (see here)
+Both sets of documentation are incomplete without each other. In an effort to bridge the gap between the reference and the user guide documentation, I engineered a solution which allows us to do the following:
+
+Create dynamic cross-links from the API reference documentation to the relevant human-written documentation page, based on mappings created by regex and LLM calls
+Insert an AI-generated summary into the API reference documentation based on the relevant human-written documentation
+
+The solution makes use of Javascript scripting and LLM calls to populate OpenAPI overlays, which serve as an easily maintainable source of truth for the doc team&rsquo;s augmentation of the API reference documentation. I regenerate the links and descriptions each release.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/personal-site/categories/samples/">
+<link rel="canonical" href="http://localhost:1313/personal-site/portfolio/reference-dita-linking/">
 <link crossorigin="anonymous" href="/personal-site/assets/css/stylesheet.60ea65106ee4e70899b8bdfb4967dad2a5f77b6ec15f9f1a570f9d848d606614.css" integrity="sha256-YOplEG7k5wiZuL37SWfa0qX3e27BX58aVw&#43;dhI1gZhQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/personal-site/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/personal-site/favicon-16x16.png">
@@ -18,8 +24,7 @@
 <link rel="mask-icon" href="http://localhost:1313/personal-site/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/personal-site/categories/samples/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/personal-site/categories/samples/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/personal-site/portfolio/reference-dita-linking/">
 <noscript>
     <style>
         #theme-toggle,
@@ -279,7 +284,7 @@
     }
 </style>
 </head>
-<body class="list" id="top">
+<body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
@@ -321,72 +326,47 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Samples
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">API payments guide
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description: This is content I wrote to document Guidewire’s Billing API. This chapter describes how producers (otherwise known as insurance agents or brokers) can make and manage payments to BillingCenter through the API.
-Tools: Postman, Oxygen, Github
-Click to see PDF
-</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to API payments guide" href="http://localhost:1313/personal-site/portfolio/apidoc/"></a>
-</article>
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/personal-site/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/personal-site/portfolio/">Writing and project work samples</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Doc tooling: API crosslink scripting
+    </h1>
+    <div class="post-meta">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">API reference doc UI improvements
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description: At Guidewire, developers write and maintain the OpenAPI specification (spec) files. I generate API reference UI documentation from the OpenAPI specs using Docusaurus with a modified Redoc plugin.
-Based on feedback we got from developers and doc site users, I made the following improvements to our API reference documentation.
-Tools: Javascript, CSS, OpenAPI overlays
-See the API refs live at: https://docs.guidewire.com/cloud/bc/latest/apiref/
-1. Sidebar overhaul Problem: The sidebar placed all the endpoints in an OpenAPI spec together at the same level, and the sidebar only listed the paths, not the resources themselves. This made it hard to find information for specs with many endpoints and longer paths.
-...</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to API reference doc UI improvements" href="http://localhost:1313/personal-site/portfolio/api-ref-improvements/"></a>
-</article>
+</div>
+  </header> 
+  <div class="post-content"><p><strong>Description</strong>: In our API documentation at Guidewire, we have both API reference documentation (see <a href="https://docs.guidewire.com/cloud/bc/latest/apiref/">here</a>) and user guide documentation (see <a href="https://docs.guidewire.com/cloud/is/202603/cloudapibf/cloudAPI/topics/landing_Cloud-API-consumer.html">here</a>)</p>
+<p>Both sets of documentation are incomplete without each other. In an effort to bridge the gap between the reference and the user guide documentation, I engineered a solution which allows us to do the following:</p>
+<ul>
+<li>Create dynamic cross-links from the API reference documentation to the relevant human-written documentation page, based on mappings created by regex and LLM calls</li>
+<li>Insert an AI-generated summary into the API reference documentation based on the relevant human-written documentation</li>
+</ul>
+<p>The solution makes use of Javascript scripting and LLM calls to populate OpenAPI overlays, which serve as an easily maintainable source of truth for the doc team&rsquo;s augmentation of the API reference documentation. I regenerate the links and descriptions each release.</p>
+<div class="image-toggle-container">
+    <div class="toggle-controls">
+        <button class="toggle-btn active" onclick="showImage(1, this.closest('.image-toggle-container'))">Before</button>
+        <button class="toggle-btn" onclick="showImage(2, this.closest('.image-toggle-container'))">After</button>
+    </div>
+<div class="images-wrapper">
+    <div class="image-container">
+        <img src="/personal-site/apirefbeforemapping.jpg" alt="Screencap of Guidewire Billing API references with callout that states 'No code samples' with an arrow to where the code samples are supposed to be.">
+        <img src="/personal-site/apirefaftermapping.jpg" alt="Screencap of Guidewire Billing API references with callout highlighting code samples. There are samples for cURL, Javascript, Python, Java, and Go.">
+    </div>   
+</div>
+<p style="text-align: center; font-size: 14px; opacity: 50%;">Click image to expand</p>
+</div>
+<p>I&rsquo;m still working on using these overlays to remove extraneous metadata fields, and I&rsquo;m experimenting with keeping example requests and responses in them as well.</p>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Configuration documentation
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description: This topic documents a feature related to the configuration of Cloud API, Guidewire’s REST API platform. The target audience is configuration developers familiar with the Guidewire ecosystem.
-Tools: Oxygen (for authoring), Intellij (for testing)
-</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Configuration documentation" href="http://localhost:1313/personal-site/portfolio/api-config-example/"></a>
-</article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Doc tooling: API crosslink scripting
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Description: In our API documentation at Guidewire, we have both API reference documentation (see here) and user guide documentation (see here)
-Both sets of documentation are incomplete without each other. In an effort to bridge the gap between the reference and the user guide documentation, I engineered a solution which allows us to do the following:
-Create dynamic cross-links from the API reference documentation to the relevant human-written documentation page, based on mappings created by regex and LLM calls Insert an AI-generated summary into the API reference documentation based on the relevant human-written documentation The solution makes use of Javascript scripting and LLM calls to populate OpenAPI overlays, which serve as an easily maintainable source of truth for the doc team’s augmentation of the API reference documentation. I regenerate the links and descriptions each release.
-...</p>
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Doc tooling: API crosslink scripting" href="http://localhost:1313/personal-site/portfolio/reference-dita-linking/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
 </article>
     </main>
     

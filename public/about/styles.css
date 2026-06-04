@@ -2,17 +2,50 @@
     /* background-color: rgb(194, 141, 141); */
     cursor: pointer;
     width: 100%;
-    border-top: 1px solid grey;
     border-bottom: 1px solid grey;
-    margin-bottom: var(--content-gap);
-    margin-top: var(--content-gap);
     text-align: left;
     /* margin: 5px; */
-    padding: 5px;
+    padding: px;
   }
 
-  .active, .collapsible:hover {
+.topitem {
+  border-top: 1px solid grey;
+  margin-top: 10px;
+}
+
+.active, .collapsible:hover {
     background-color: #555;
     /* border-top: none;
     border-bottom: none; */
   }
+
+.post-content h3 {
+    font-size: 24px;
+}
+
+.post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+    margin: 16px 0 16px;
+}
+
+.h2 {
+  margin-left: 10px;
+}
+
+.post-content h2 {
+    margin: 24px auto 24px;
+    font-size: 32px;
+    margin-left: 10px
+}
+
+h3.workh3 {
+    margin-top: 40px;
+}
+
+p {
+    line-height: 1.42;
+    margin: 14px 0;
+}
+
+.post-content li {
+    margin-top: 0px;
+}

@@ -10,16 +10,6 @@ params:
 
 **Tools:** Postman, Oxygen, Github
 
-[![Screencap of API documentation](api-payments-example.png)](https://docs.guidewire.com/cloud/bc/latest/cloudapibf/cloudAPI/topics/132-BCBilling/agency-bill/c_agency-bill-payments.html)
-
-
-
-
-
-
-
-
-
-
-
+[![Screencap of API documentation](api-payments-example.png)](/personal-site/CloudAPI-Consumer.pdf)
+<p style="text-align: center; font-size: 14px; opacity: 70%;">Click to see PDF</p>
 

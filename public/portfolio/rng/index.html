@@ -7,7 +7,8 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Internal tooling documentation | Simon Laraway</title>
 <meta name="keywords" content="">
-<meta name="description" content="Explanation: The Release Notes Generator is an internally-developed doc tool app that Guidewire writers use to pull release notes from Jira and format them in DITA. I took ownership of the Release Notes Generator after volunteering to assist our overworked documentation tool developer team. I have made a number of improvements to its functionality, and I revamped our internal documentation on it. The audience is both users of the release notes generator, and anyone who takes over development of the release note generator in the future.">
+<meta name="description" content="Description: The Release Notes Generator is an internally-developed doc tool app that extracts customer summaries from Jira and outputs them in a DITA file. The app saves writers from needing to manually copy, paste, and format content from Jira each time they create release notes.
+I took ownership of the Release Notes Generator from our documentation tool developer team. I have made a number of improvements to the code, and I wrote the following internal documentation on it.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/personal-site/portfolio/rng/">
 <link crossorigin="anonymous" href="/personal-site/assets/css/stylesheet.60ea65106ee4e70899b8bdfb4967dad2a5f77b6ec15f9f1a570f9d848d606614.css" integrity="sha256-YOplEG7k5wiZuL37SWfa0qX3e27BX58aVw&#43;dhI1gZhQ=" rel="preload stylesheet" as="style">
@@ -332,18 +333,106 @@
 
 </div>
   </header> 
-  <div class="post-content"><p><strong>Explanation</strong>: The Release Notes Generator is an internally-developed doc tool app that Guidewire writers use to pull release notes from Jira and format them in DITA. I took ownership of the Release Notes Generator after volunteering to assist our overworked documentation tool developer team. I have made a number of improvements to its functionality, and I revamped our internal documentation on it. The audience is both users of the release notes generator, and anyone who takes over development of the release note generator in the future.</p>
+  <div class="post-content"><p><strong>Description</strong>: The Release Notes Generator is an internally-developed doc tool app that extracts customer summaries from Jira and outputs them in a DITA file. The app saves writers from needing to manually copy, paste, and format content from Jira each time they create release notes.</p>
+<p>I took ownership of the Release Notes Generator from our documentation tool developer team. I have made a number of improvements to the code, and I wrote the following internal documentation on it.</p>
 <hr>
-<h1 id="release-notes-generator-user-guide">Release Notes Generator user guide<a hidden class="anchor" aria-hidden="true" href="#release-notes-generator-user-guide">#</a></h1>
-<p>When you have finalized the customer summaries for a release in Jira, you can use the Release Notes Generator to extract the customer summaries and output them in a DITA table.</p>
-<h2 id="using-the-release-notes-generator">Using the Release Notes Generator<a hidden class="anchor" aria-hidden="true" href="#using-the-release-notes-generator">#</a></h2>
-<p>The Release Notes Generator is a TeamCity build or something.</p>
+<h2 id="release-notes-generator-user-guide">Release Notes Generator user guide<a hidden class="anchor" aria-hidden="true" href="#release-notes-generator-user-guide">#</a></h2>
+<p>When you have finalized the customer summaries for a release in Jira, you can use the Release Notes Generator to extract the release notes and output them in a DITA table. You can and paste the DITA table into the release notes.</p>
+<p>The Release Notes Generator is hosted as a build in TeamCity. Run the Release Notes Generator manually when you need to generate release notes.</p>
+<h3 id="running-the-release-notes-generator">Running the Release Notes Generator<a hidden class="anchor" aria-hidden="true" href="#running-the-release-notes-generator">#</a></h3>
 <ol>
-<li>Navigate to the <a href="www.example.com">Release Notes Generator</a>.</li>
-<li>Select Run. The &hellip; modal appears.</li>
-<li></li>
+<li>Navigate to the <a href="www.example.com">Release Notes Generator build</a>.</li>
+<li>Select <code>Run</code>. The <code>Run Custom Build Documentation Tools/Generators/Run Release Notes Generator</code> modal appears.</li>
+<li>Select <code>Parameters</code>.</li>
+<li>Specify the configuration parameters. These parameters are used to query for Jiras. See the table below for the full reference.</li>
+<li>Select <code>Run Build</code>.</li>
+<li>When the build is complete, navigate to <code>Artifacts</code>.</li>
+<li>Under <code>out</code>, Select the generated file to download it.</li>
 </ol>
-<h2 id="how-the-release-notes-generator-works">How the release notes generator works<a hidden class="anchor" aria-hidden="true" href="#how-the-release-notes-generator-works">#</a></h2>
+<h3 id="configuration-parameters">Configuration parameters<a hidden class="anchor" aria-hidden="true" href="#configuration-parameters">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Jira projects</td>
+          <td>The Jira projects. If there are spaces in the Jira project, wrap it in quotation marks. Separate projects with commas. The Release Note Generator searches for Jira issues in all these projects.</td>
+          <td><code>IERC,IERS,&quot;PORT TEST&quot;</code></td>
+      </tr>
+      <tr>
+          <td>Jira versions</td>
+          <td>The number. If there are spaces in the release number, wrap it in quotation marks. Separate versions with commas.</td>
+          <td><code>&quot;Sundance (2025.05.0)&quot;,&quot;Alpine (2025.06.0)&quot;</code></td>
+      </tr>
+      <tr>
+          <td>Jira components (optional)</td>
+          <td>A value in the <code>Components</code> field in the Jira. For example, a Jira in the <code>IERC</code> project has a component of <code>HazardSuite</code> to specify that the release note should only be included in the HazardSuite release notes.</td>
+          <td><code>HazardSuite</code></td>
+      </tr>
+      <tr>
+          <td>Release notes type</td>
+          <td>The type of release note. Can be either <code>Improvements</code> or <code>Known issues</code>.</td>
+          <td><code>Improvements</code> or <code>Known issues</code></td>
+      </tr>
+      <tr>
+          <td>Output file name</td>
+          <td>The name of the file that the Release Notes Generator outputs.</td>
+          <td>Defaults to &ldquo;release-notes&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Output file title</td>
+          <td>The title of the file in the DITA.</td>
+          <td>Defaults to &ldquo;Release notes&rdquo;</td>
+      </tr>
+      <tr>
+          <td>Include &ldquo;Application&rdquo; column</td>
+          <td>Whether to include an additional column with the name of the application in the output table. Used mainly for InsuranceSuite patch release notes.</td>
+          <td>N/A</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="criteria-for-the-release-notes-generator-to-retrieve-a-jira">Criteria for the Release Notes Generator to retrieve a Jira<a hidden class="anchor" aria-hidden="true" href="#criteria-for-the-release-notes-generator-to-retrieve-a-jira">#</a></h3>
+<p>For a the Release Notes Generator to retrieve a Jira, the Jira must meet all the parameters you specify. Additionally, a Jira must meet the following criteria:</p>
+<ul>
+<li>Have a status of <code>Closed</code>.</li>
+<li>&ldquo;Release note needed&rdquo; set to &ldquo;Yes&rdquo;.</li>
+<li>&ldquo;Release note complete&rdquo; set to &ldquo;Yes&rdquo;.</li>
+<li>The &ldquo;Customer Summary&rdquo; field must not be empty.</li>
+</ul>
+<h3 id="specifying-profiling-attributesconditionalization-for-release-notes">Specifying profiling attributes/conditionalization for release notes<a hidden class="anchor" aria-hidden="true" href="#specifying-profiling-attributesconditionalization-for-release-notes">#</a></h3>
+<p>The Release Note Generator supports DITA profiling attributes in customer summaries. Profiling attributes are used to conditionalize content. For example, if a release note only applies to a certain product, you can apply the <code>product</code> profiling attribute.</p>
+<p>To specify profiling attributes for a release note, include the following text at the beginning of the customer summary.</p>
+<pre tabindex="0"><code>#attr:&lt;attribute&gt;=&lt;value&gt;#
+</code></pre><blockquote>
+<p>Note: Do not apply styling such as bold, code, italic, etc. to the profiling attribute. Leave it as plain text.</p>
+</blockquote>
+<p>For example, the following conditionalizes a release note for HazardSuite:</p>
+<pre tabindex="0"><code>#attr:product=HazardSuite#
+</code></pre><p>The attribute appears on the <code>row</code> element for the release note. The following demonstrates how a customer summary with an attribute applied looks in the customer summary in Jira, and how the Release Notes Generator renders that release note.</p>
+<p><strong>Customer summary:</strong></p>
+<pre tabindex="0"><code>#attr:product=HazardSuite#
+Fixed a bug where the HazardSuite API threw a 500 error if you attempted to PATCH an account&#39;s primary contact and the account had a biweekly payment plan.
+</code></pre><p><strong>DITA:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;row</span> <span style="color:#a6e22e">product=</span><span style="color:#e6db74">&#34;HazardSuite&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;entry&gt;</span>AFHS-2283<span style="color:#f92672">&lt;/entry&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;entry&gt;</span>Fixed a bug where the HazardSuite API threw a 500 error if you attempted to PATCH an account&#39;s primary contact and the account had a biweekly payment plan.<span style="color:#f92672">&lt;/entry&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/row&gt;</span>
+</span></span></code></pre></div><style>
+table {
+            border-collapse: collapse; /* Merges adjacent borders into a single border */
+            width: 100%; /* Optional: Makes the table span the full width */
+        }
+th, td {
+    border: 1px solid grey; /* Applies a 1px solid black border to all header and data cells */
+    padding: 8px; /* Adds space between the content and the border for readability */
+    text-align: left; /* Optional: Aligns text to the left */
+}
+</style>
 
 
   </div>
@@ -356,7 +445,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/personal-site/">Simon Laraway</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/personal-site/">Simon Laraway</a></span> · 
 
     <span>
         Powered by
