@@ -3,7 +3,7 @@
     width: 100%;
     border-bottom: 1px solid grey;
     text-align: left;
-    padding: 10px 0;
+    padding: 17px 0;
     display: block;
     margin: 0;
 }
@@ -44,4 +44,28 @@ p {
 
 .post-content li {
     margin-top: 0;
+}
+
+.collapsible {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.collapsible::after {
+  content: "";
+  flex: none;
+  width: 0.45em;
+  height: 0.45em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-0.1em, -0.1em);
+  transition: transform 0.2s ease;
+}
+
+.collapsible.active::after {
+  transform: rotate(-135deg) translate(-0.1em, -0.1em);
 }
