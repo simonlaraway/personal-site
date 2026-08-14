@@ -1,9 +1,10 @@
 baseURL: 'https://simonlaraway.github.io/personal-site/'
-languageCode: 'en-us'
+locale: 'en-US'
 title: 'Simon Laraway'
 theme: 'hugo-PaperMod'
 # canonifyURLs: false
 # relativeURLs: false
+author: 'Simon Laraway'
 
 menu:
   main:
@@ -30,6 +31,7 @@ params:
   mainSections:
   - about
   social: true
+  author: 'Simon Laraway'  # Add it here too
 
 markup:
   goldmark:
