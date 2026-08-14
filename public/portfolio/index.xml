@@ -4,8 +4,8 @@
     <title>Writing and project work samples on Simon Laraway</title>
     <link>http://localhost:1313/personal-site/portfolio/</link>
     <description>Recent content in Writing and project work samples on Simon Laraway</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>en-us</language>
+    <generator>Hugo -- 0.161.1</generator>
+    <language>en-US</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-site/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -51,6 +51,14 @@
 &lt;li&gt;Insert an AI-generated summary into the API reference documentation based on the relevant human-written documentation&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The solution makes use of Javascript scripting and LLM calls to populate OpenAPI overlays, which serve as an easily maintainable source of truth for the doc team&amp;rsquo;s augmentation of the API reference documentation. I regenerate the links and descriptions each release.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Doc tooling: release notes generator</title>
+      <link>http://localhost:1313/personal-site/portfolio/rng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal-site/portfolio/rng/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: The Release Notes Generator is an internally-developed doc tool app that extracts customer summaries from Jira and outputs them in a DITA file. The app saves writers from needing to manually copy, paste, and format content from Jira each time they create release notes.&lt;/p&gt;
+&lt;p&gt;I took ownership of the Release Notes Generator from our documentation tool developer team. I have made a number of improvements to the code, and I wrote the following internal documentation on it.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

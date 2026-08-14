@@ -14,9 +14,6 @@
     <loc>http://localhost:1313/personal-site/portfolio/</loc>
     <lastmod>2023-11-05T19:08:40-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/personal-site/samples/</loc>
-    <lastmod>2023-11-05T19:07:40-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/personal-site/</loc>
     <lastmod>2023-10-29T22:10:25-06:00</lastmod>
   </url><url>
@@ -30,7 +27,11 @@
   </url><url>
     <loc>http://localhost:1313/personal-site/portfolio/reference-dita-linking/</loc>
   </url><url>
+    <loc>http://localhost:1313/personal-site/portfolio/rng/</loc>
+  </url><url>
     <loc>http://localhost:1313/personal-site/categories/samples/</loc>
+  </url><url>
+    <loc>http://localhost:1313/personal-site/samples/</loc>
   </url><url>
     <loc>http://localhost:1313/personal-site/tags/</loc>
   </url>
